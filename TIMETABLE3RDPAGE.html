@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Timetable</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            background-image: url('class_timetable_bg.jpg');
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+
+        .timetable {
+            margin: 20px;
+            border-collapse: collapse;
+        }
+
+        .timetable th, .timetable td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .timetable th {
+            background-color: #f2f2f2;
+        }
+
+        .timetable th.hour {
+            text-align: left;
+            width: 150px; /* Adjust the width as needed */
+        }
+    </style>
+</head>
+<body>
+    <h1>Class Timetable</h1>
+    <p>Class: <span id="class"></span></p>
+
+    <!-- Timetable content for each class -->
+    <table class="timetable">
+        <tr>
+            <th></th>
+            <th class="hour">10 am - 11 am</th>
+            <th class="hour">11 am - 12 pm</th>
+            <th class="hour">12 pm - 1 pm</th>
+            <th class="hour">1 pm - 2 pm (Lunch)</th>
+            <th class="hour">2 pm - 3 pm</th>
+            <th class="hour">3 pm - 4 pm</th>
+        </tr>
+        <tr>
+            <th>Day 1</th>
+            <td>Content</td>
+            <td>Content</td>
+            <td>Content</td>
+            <td rowspan="5" style="background-color: #f2f2f2;">Lunch Break</td>
+            <td>Content</td>
+            <td>Content</td>
+        </tr>
+        <tr>
+            <th>Day 2</th>
+            <td>Content</td>
+            <td>Content</td>
+            <td>Content</td>
+            <td>Content</td>
+            <td>Content</td>
+        </tr>
+        <tr>
+            <th>Day 3</th>
+            <td>Content</td>
+            <td>Content</td>
+            <td>Content</td>
+            <td>Content</td>
+            <td>Content</td>
+        </tr>
+        <tr>
+            <th>Day 4</th>
+            <td>Content</td>
+            <td>Content</td>
+            <td>Content</td>
+            <td>Content</td>
+            <td>Content</td>
+        </tr>
+        <tr>
+            <th>Day 5</th>
+            <td>Content</td>
+            <td>Content</td>
+            <td>Content</td>
+            <td>Content</td>
+            <td>Content</td>
+        </tr>
+    </table>
+
+    <button onclick="window.location.href='class_selection.html'">Home</button>
+    <script>
+        // Get class number from URL query parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const classNumber = urlParams.get('class');
+        document.getElementById('class').innerText = classNumber;
+    </script>
+</body>
+</html>
