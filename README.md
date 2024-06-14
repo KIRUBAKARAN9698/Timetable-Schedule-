@@ -1,1 +1,1 @@
-http://index.com
+http://TIMETABLE1STPAGE.com
